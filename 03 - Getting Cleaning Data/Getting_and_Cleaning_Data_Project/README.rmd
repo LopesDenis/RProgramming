@@ -1,11 +1,15 @@
 ---
-title: "README"
-output: html_notebook
+title: "README - Getting and Cleaning Data - Course Project"
+author: "Denis Lopes"
+output: 
+  html_notebook:
+  keep_md: TRUE
 ---
 
-# README - Getting and Cleaning Data - Course Project 
+teste
+output: html_notebook
 
-Author: Denis Lopes
+
 
 
 ### Goal of The Project
