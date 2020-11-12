@@ -1,0 +1,30 @@
+---
+title: "Common R Function"
+output: 
+  html_notebook:
+    toc: TRUE
+---
+
+# Markdown  
+
+## Index  
+
+in Beggning  
+```{r}
+---
+title: "Common R Function"
+output: 
+  html_notebook:
+    toc: TRUE
+---
+
+```
+
+
+
+
+
+
+
+
+

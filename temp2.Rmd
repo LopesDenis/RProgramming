@@ -1,0 +1,50 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+
+data.frame':	4706 obs. of  46 variables:
+ $ Provider.Number                                                                      : chr  "010001" "010005" "010006" "010007" ...
+ $ Hospital.Name                                                                        : chr  "SOUTHEAST ALABAMA MEDICAL CENTER" "MARSHALL MEDICAL CENTER SOUTH" "ELIZA COFFEE MEMORIAL HOSPITAL" "MIZELL MEMORIAL HOSPITAL" ...
+ $ Address.1                                                                            : chr  "1108 ROSS CLARK CIRCLE" "2505 U S HIGHWAY 431 NORTH" "205 MARENGO STREET" "702 N MAIN ST" ...
+ $ Address.2                                                                            : chr  "" "" "" "" ...
+ $ Address.3                                                                            : chr  "" "" "" "" ...
+ $ City                                                                                 : chr  "DOTHAN" "BOAZ" "FLORENCE" "OPP" ...
+ $ State                                                                                : chr  "AL" "AL" "AL" "AL" ...
+ $ ZIP.Code                                                                             : chr  "36301" "35957" "35631" "36467" ...
+ 
+ 
+ 
+ # Change type of Data.Table
+ 
+```{r}
+library("data.table")
+install.packages('bit64')
+library("bit64")
+
+# Reading in data
+outcome1 <- data.table::fread('outcome-of-care-measures.csv')
+outcome[, (11) := lapply(.SD, as.numeric), .SDcols = (11)]
+outcome[, lapply(.SD
+                 , hist
+                 , xlab= "Deaths"
+                 , main = "Hospital 30-Day Death (Mortality) Rates from Heart Attack"
+                 , col="lightblue")
+        , .SDcols = (11)]
+str(outcome)
+names(outcome)
+```
+ 
+ 
+ 
+ 
+ #Temporary
+ 
+```{r}
+hospitalData <- data.table::fread('hospital-data.csv')
+str(hospitalData)
+```
+ 
+ 
