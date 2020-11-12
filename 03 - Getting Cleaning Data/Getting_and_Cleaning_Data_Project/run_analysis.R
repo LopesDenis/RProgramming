@@ -1,3 +1,5 @@
-# Getting and Cleaning Data - Course Project 
+# Script - Getting and Cleaning Data - Course Project 
 # Author: Denis Lopes
+
+
 
