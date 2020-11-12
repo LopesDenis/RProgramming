@@ -2,8 +2,7 @@
 title: "README - Getting and Cleaning Data - Course Project"
 author: "Denis Lopes"
 output: 
-  html_notebook:
-  keep_md: TRUE
+  rmarkdown::github_document
 ---
 
 teste
