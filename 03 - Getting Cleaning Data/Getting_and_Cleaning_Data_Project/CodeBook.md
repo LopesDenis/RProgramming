@@ -1,9 +1,11 @@
 ---
-title: "README"
-output: html_notebook
+title: "CodeBook"
+output: 
+  html_notebook:
+    toc: TRUE
 ---
 
-# README - Getting and Cleaning Data - Course Project 
+# CodeBook - Getting and Cleaning Data - Course Project 
 
 Author: Denis Lopes
 
@@ -73,4 +75,9 @@ You should create one R script called run_analysis.R that does the following.
 4. Appropriately labels the data set with descriptive variable names.
 5. From the data set in step 4, creates a second, independent tidy data 
 set with the average of each variable for each activity and each subject.
+
+
 \
+\
+\
+
