@@ -1,2 +1,2 @@
 # RProgramming
-Evolute and Organize to repo studyDataScienceCoursera
+Evolved and Organized to repo studyDataScienceCoursera
