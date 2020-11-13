@@ -6,11 +6,6 @@ output:
       
 ---
 
-teste
-output: html_notebook
-
-
-
 
 ### Goal of The Project
 **Review Criteria**

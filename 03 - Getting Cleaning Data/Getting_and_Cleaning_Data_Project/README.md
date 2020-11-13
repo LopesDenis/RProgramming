@@ -2,8 +2,6 @@ README - Getting and Cleaning Data - Course Project
 ================
 Denis Lopes
 
-teste output: html\_notebook
-
 ### Goal of The Project
 
 **Review Criteria**

@@ -658,6 +658,13 @@ mergedDT <- merge(GDPrank, eduDT, by = 'CountryCode')
 
 mergedDT[grepl(pattern = "Fiscal year end: June 30;", mergedDT[, `Special Notes`]), .N]
 
+#denis
+countrys <- merge(GDPrank, eduDT, by = 'CountryCode')
+
+countrys[grepl(pattern = "Fiscal year end: June 30;", countrys[, `Special Notes`]), .N ]
+
+names(countrys)
+
 # Answer: 
 # 13
 ```
@@ -688,6 +695,53 @@ timeDT[((timeCol >= "2012-01-01") & (timeCol < "2013-01-01")) & (weekdays(timeCo
 # Answer:
 # 47
 ```
+
+
+
+### Load price of stock
+You can use the quantmod (http://www.quantmod.com/) package to get historical stock prices for publicly traded companies on the NASDAQ and NYSE. Use the following code to download data on Amazon's stock price and get the times the data was sampled.
+```{R}
+#install.packages("quantmod")
+library(quantmod) 
+amzn = getSymbols("AMZN",auto.assign=FALSE) 
+sampleTimes = index(amzn)
+```
+How many values were collected in 2012? How many values were collected on Mondays in 2012?
+```{R}
+# install.packages("quantmod")
+library("quantmod")
+amzn <- getSymbols("AMZN",auto.assign=FALSE)
+sampleTimes <- index(amzn) 
+timeDT <- data.table::data.table(timeCol = sampleTimes)
+
+# How many values were collected in 2012? 
+timeDT[(timeCol >= "2012-01-01") & (timeCol) < "2013-01-01", .N ]
+# Answer: 
+# 250
+
+# How many values were collected on Mondays in 2012?
+timeDT[((timeCol >= "2012-01-01") & (timeCol < "2013-01-01")) & (weekdays(timeCol) == "Monday"), .N ]
+
+#in brazil monday -> segunda-feira
+timeDT[((timeCol >= "2012-01-01") & (timeCol < "2013-01-01")) & (weekdays(timeCol) == "segunda-feira"), .N ]
+
+# Answer:
+# 47
+
+#denis
+timeDT[, weekdays(timeCol)]
+```
+
+<a name="top"></a>  <br> <br>    
+
+
+
+
+<!-- ###############   New   Topic    ##################   --> 
+
+# Course Project
+
+
 
 
 ### temp  

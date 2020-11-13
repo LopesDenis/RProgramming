@@ -40,6 +40,15 @@ output:
 
 ```
 
+Or Reame for GitHub
+```{r}
+title: "README - Getting and Cleaning Data - Course Project"
+author: "Denis Lopes"
+output: 
+    rmarkdown::github_document
+      
+```
+
 
 ### Finish paragraph - Next Line
 2 spaces or \\ in end line(paragraph)    
